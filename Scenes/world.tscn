@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvm6xjd6cntqs"]
+[gd_scene load_steps=4 format=3 uid="uid://cvm6xjd6cntqs"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_td2m8"]
 [ext_resource type="Texture2D" uid="uid://d172hf76rsjf2" path="res://Art/Player/Artz.png" id="1_tshhy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5je5t"]
 
 [node name="World" type="Node2D"]
 
@@ -12,3 +14,6 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_tshhy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_5je5t")
