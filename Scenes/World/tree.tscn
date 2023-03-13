@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://xvdwpjq4a2ur"]
+[gd_scene load_steps=3 format=3 uid="uid://es4kg6uh8rga"]
 
-[ext_resource type="Texture2D" uid="uid://ywbn2ug8r5f" path="res://Art/Tree.png" id="1_se384"]
+[ext_resource type="Texture2D" uid="uid://ywbn2ug8r5f" path="res://Art/World/Tree.png" id="1_oypim"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkf1b"]
 radius = 6.0
@@ -9,7 +9,7 @@ radius = 6.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -18)
-texture = ExtResource("1_se384")
+texture = ExtResource("1_oypim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
