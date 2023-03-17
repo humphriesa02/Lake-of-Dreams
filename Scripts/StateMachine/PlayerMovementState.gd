@@ -9,9 +9,9 @@ func handle_input(_event: InputEvent) -> void:
 	# Grab input from our registered input maps
 	player.input_direction = Input.get_vector("left", "right", "up", "down").normalized()
 	if Input.is_action_just_pressed("action"):
-		state_machine.transition_to("Fishing")
+		state_machine.transition_to("PlayerFishingState")
 
-func physics_update(delta: float) -> void:
+func update(delta: float) -> void:
 	# If we have input
 	if player.input_direction != Vector2.ZERO:
 		player.animation_tree.set("parameters/Idle/blend_position", player.input_direction)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvm6xjd6cntqs"]
+[gd_scene load_steps=7 format=3 uid="uid://cvm6xjd6cntqs"]
 
-[ext_resource type="PackedScene" uid="uid://d26eep3g6xo6s" path="res://Scenes/Player/player.tscn" id="1_3v1fd"]
+[ext_resource type="PackedScene" uid="uid://csdda4q2v64ok" path="res://Scenes/Player/player.tscn" id="1_3v1fd"]
 [ext_resource type="Texture2D" uid="uid://y62dd8hpj1tf" path="res://Art/World/Tileset/LakeOfDreamsTiles.png" id="1_36n24"]
 [ext_resource type="PackedScene" uid="uid://es4kg6uh8rga" path="res://Scenes/World/tree.tscn" id="2_2igtr"]
+[ext_resource type="PackedScene" uid="uid://ds62rk3f3kw3" path="res://Scenes/World/camper.tscn" id="4_2v2dd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g38vl"]
 texture = ExtResource("1_36n24")
@@ -50,11 +51,18 @@ layer_0/tile_data = PackedInt32Array(0, 0, 2, 65536, 131072, 4, 131072, 131072, 
 [node name="Player" parent="." instance=ExtResource("1_3v1fd")]
 position = Vector2(80, 40)
 
-[node name="Tree" parent="." instance=ExtResource("2_2igtr")]
-position = Vector2(112, 112)
+[node name="Trees" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Tree2" parent="." instance=ExtResource("2_2igtr")]
-position = Vector2(224, 72)
+[node name="Tree" parent="Trees" instance=ExtResource("2_2igtr")]
+position = Vector2(85, 100)
 
-[node name="Tree3" parent="." instance=ExtResource("2_2igtr")]
-position = Vector2(200, 144)
+[node name="Tree2" parent="Trees" instance=ExtResource("2_2igtr")]
+position = Vector2(283, 68)
+
+[node name="Tree3" parent="Trees" instance=ExtResource("2_2igtr")]
+position = Vector2(34, 149)
+
+[node name="Camper" parent="." instance=ExtResource("4_2v2dd")]
+position = Vector2(244, 126)
+metadata/_edit_group_ = true

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds62rk3f3kw3"]
+
+[ext_resource type="Texture2D" uid="uid://c2r8povkmrisp" path="res://Art/World/TruckCamper 1.png" id="1_6u77x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhw7k"]
+size = Vector2(94, 38)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="TruckCamper1" type="Sprite2D" parent="."]
+texture = ExtResource("1_6u77x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 14)
+shape = SubResource("RectangleShape2D_bhw7k")
