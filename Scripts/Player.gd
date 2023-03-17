@@ -4,8 +4,8 @@ extends CharacterBody2D
 @export var speed = 100
 @export var accel = 500
 @export var frict = 500
+@export var casting_speed = 100;
 
-var input_direction = Vector2.ZERO
 
 @onready var animation_player = $AnimationPlayer
 @onready var animation_tree = $AnimationTree

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnhjenssc0dwl"]
+
+[ext_resource type="Script" path="res://Scripts/CursorManager.gd" id="1_cx87i"]
+[ext_resource type="Texture2D" uid="uid://rabnv5ttxflw" path="res://Art/Cursors/empty_cursor.png" id="2_ipeo7"]
+[ext_resource type="Texture2D" uid="uid://dnt5spqthbhm2" path="res://Art/Cursors/Indicator-Sheet.png" id="2_wtbq7"]
+[ext_resource type="Texture2D" uid="uid://c8pl4g07m753t" path="res://Art/Cursors/default_cursor.png" id="3_rbwl5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56ka6"]
+atlas = ExtResource("2_wtbq7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16ku0"]
+atlas = ExtResource("2_wtbq7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqf8v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rbwl5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56ka6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16ku0")
+}],
+"loop": true,
+"name": &"fishing_green",
+"speed": 5.0
+}]
+
+[node name="CursorManager" type="CanvasLayer"]
+script = ExtResource("1_cx87i")
+empty_cursor = ExtResource("2_ipeo7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_qqf8v")

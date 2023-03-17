@@ -1,12 +1,10 @@
-[gd_scene load_steps=48 format=3 uid="uid://csdda4q2v64ok"]
+[gd_scene load_steps=43 format=3 uid="uid://csdda4q2v64ok"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_u7kjl"]
 [ext_resource type="Texture2D" uid="uid://bq80tlscg23ur" path="res://Art/Player/PlayerTileset.png" id="2_hem87"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/StateMachine.gd" id="3_tcy6g"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/PlayerMovementState.gd" id="4_82s4b"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/PlayerFishingState.gd" id="5_owoq7"]
-[ext_resource type="Texture2D" uid="uid://dnt5spqthbhm2" path="res://Art/Fishing/Indicator-Sheet.png" id="6_uh8c4"]
-[ext_resource type="Script" path="res://Scripts/MouseCursor.gd" id="7_lmtk4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5je5t"]
 radius = 6.0
@@ -346,28 +344,6 @@ graph_offset = Vector2(-71, 5)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_8r74r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_064oq"]
-atlas = ExtResource("6_uh8c4")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5hc5v"]
-atlas = ExtResource("6_uh8c4")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5j862"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_064oq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5hc5v")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_u7kjl")
 
@@ -405,9 +381,3 @@ script = ExtResource("4_82s4b")
 
 [node name="PlayerFishingState" type="Node" parent="StateMachine"]
 script = ExtResource("5_owoq7")
-
-[node name="MouseCursor" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_5j862")
-frame = 1
-frame_progress = 0.172223
-script = ExtResource("7_lmtk4")

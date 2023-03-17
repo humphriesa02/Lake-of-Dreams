@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnt5spqthbhm2"
-path="res://.godot/imported/Indicator-Sheet.png-54fa57f14cdd336ab71975ed63774d7d.ctex"
+path="res://.godot/imported/Indicator-Sheet.png-8b8d3b6e4231bd68036809745a1056b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fishing/Indicator-Sheet.png"
-dest_files=["res://.godot/imported/Indicator-Sheet.png-54fa57f14cdd336ab71975ed63774d7d.ctex"]
+source_file="res://Art/Cursors/Indicator-Sheet.png"
+dest_files=["res://.godot/imported/Indicator-Sheet.png-8b8d3b6e4231bd68036809745a1056b7.ctex"]
 
 [params]
 
