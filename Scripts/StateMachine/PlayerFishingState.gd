@@ -53,6 +53,8 @@ func update(delta: float) -> void:
 					player.animation_tree.set("parameters/Fishing/blend_position", Vector2(0, 1.1))
 				elif get_viewport().get_mouse_position().y <  player.position.y:
 					player.animation_tree.set("parameters/Fishing/blend_position", Vector2(0, -1.1))
+					
+					
 		FishingState.WindingState: # Increment and decrement the power bar
 			if cast_distance_percentage < 1 and not flipped:
 				cast_distance_percentage += delta
@@ -62,12 +64,28 @@ func update(delta: float) -> void:
 				flipped = true
 			elif cast_distance_percentage <= 0 and flipped:
 				flipped = false
+				
+				
 		FishingState.CastingState:
 			pass
+			
+			
 		FishingState.WaitingForBiteState:
 			pass
+			
+			
 		FishingState.FishOnState:
 			pass
+			
+			
 		FishingState.FishCaughtState:
 			pass
 		
+		
+func move_to_pos(pos, speed):
+	
+	#Unit vector pointing at the target position from the characters position
+	var direction = player.global_position.direction_to(pos)
+	
+	velocity = direction * speed
+	move_and_slide()

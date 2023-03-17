@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://5oi3ij4in1go"]
+
+[node name="Bobber" type="StaticBody2D"]
