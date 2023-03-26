@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://5oi3ij4in1go"]
+[gd_scene load_steps=3 format=3 uid="uid://5oi3ij4in1go"]
+
+[ext_resource type="Texture2D" uid="uid://bm0h6bscfm8e3" path="res://Art/Fishing/Bobber.png" id="1_2yqnl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bfwg8"]
+radius = 7.0
 
 [node name="Bobber" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2yqnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bfwg8")
